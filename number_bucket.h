@@ -26,10 +26,31 @@ public:
         bucket.erase(bucket.begin());
     }
 
+    void print(){
+
+        //prints all of the values currently in the vector
+        cout << "The values currently in my bucket are: ";
+
+        //for loop consisting of the counting integer i and the bucket range
+        for (int i : bucket){
+            cout << " "<< i;}
+
+        cout << endl;
+    }
+
     int get_size(){
         return bucket.size();
     }
+
+
     bool isEmpty(){
+        
+        if (bucket.empty() == 0){
+            cout << "There are numbers in the bucket. " << endl;}
+        else
+            cout << "The bucket is currently empty." << endl;
+
+
        return bucket.empty();
     }
 private:
