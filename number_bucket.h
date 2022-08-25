@@ -25,15 +25,20 @@ public:
     void pop(){
         bucket.erase(bucket.begin());
     }
-
+//I went ahead and added a print function in because I felt it would be useful for testing and implementation.
     void print(){
 
         //prints all of the values currently in the vector
-        cout << "The values currently in my bucket are: ";
+        cout << "The values currently in the bucket are: ";
 
         //for loop consisting of the counting integer i and the bucket range
+
         for (int i : bucket){
-            cout << " "<< i;}
+            if (i == 0){
+                cout << "The bucket is empty.";
+            }
+            else
+                cout << " "<< i;}
 
         cout << endl;
     }
@@ -44,14 +49,13 @@ public:
 
 
     bool isEmpty(){
-        
         if (bucket.empty() == 0){
             cout << "There are numbers in the bucket. " << endl;}
         else
             cout << "The bucket is currently empty." << endl;
 
 
-       return bucket.empty();
+       // return bucket.empty();
     }
 private:
 
